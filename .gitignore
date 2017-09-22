@@ -1,0 +1,6 @@
+# Ignore the Visual Studio folder
+.vs
+
+# Ignore objects and executables, compile on each client
+*.obj
+*.exe
