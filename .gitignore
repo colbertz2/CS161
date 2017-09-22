@@ -4,3 +4,4 @@
 # Ignore objects and executables, compile on each client
 *.obj
 *.exe
+*.out
