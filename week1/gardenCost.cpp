@@ -10,5 +10,22 @@ using namespace std;
 // A simple input/output program with mathematical operations.
 int main()
 {
+  // Declare variables for each of the input and output values
+
+
+  // Prompt the user, get the soil cost
+
+
+  // Prompt the user, get the seed cost
+
+
+  // Prompt the user, get the fence cost
+
+
+  // Calculate the total cost of the three items
+
+
+  // Display the total cost
+
   
 }
