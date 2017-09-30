@@ -1,5 +1,6 @@
-# Ignore the Visual Studio folder
+# Ignore the Visual Studio and VS Code folders
 .vs
+.vscode
 
 # Ignore objects and executables, compile on each client
 *.obj
