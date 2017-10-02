@@ -22,6 +22,7 @@ int main()
     cin >> input5;
 
     // Use another function to find the mean?
+    // function avg()
 
     // Output the mean
     // cout << "The average of those numbers is:\n";
