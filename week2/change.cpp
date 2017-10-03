@@ -37,6 +37,7 @@ int main()
     pennies = cents;
 
     // Output for the user
+    cout << "Your change will be:" << endl;
     cout << "Q: " << quarters << endl;
     cout << "D: " << dimes << endl;
     cout << "N: " << nickels << endl;
