@@ -5,8 +5,7 @@
 *********************************************************************/
 
 #include <iostream>
-// using namespace std;
-    // TA said not to use namespace declaration like this
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -29,12 +28,6 @@ int main()
     // Calculate the mean of the input variables
     sumOfInputs = input1 + input2 + input3 + input4 + input5;
     avgOfInputs = sumOfInputs / 5;
-
-    // Some garbage to test my output variables
-    cout << "\n\n";
-    cout << "Sum of inputs: " << sumOfInputs << endl;
-    cout << "Average of inputs: " << avgOfInputs << endl;
-    cout << "\n\n";
 
     // Output the mean
     cout << "The average of those numbers is:\n";

@@ -10,7 +10,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-// Get input from the user and output the fewest number of coins needed to represent that sum with larger denominations.
+// Get input from the user and output the fewest number of coins needed to represent that sum with larger denominations
 int main()
 {
     // Declare variables for later
@@ -20,7 +20,8 @@ int main()
     cout << "Please enter an amount in cents less than a dollar." << endl;
     cin >> cents;
 
-    // Get the number of quarters less than cents, then set cents to the remainder
+    // Number of quarters is the integer multiple of 25 that fits into cents
+    // Then, reset cents to the remainder of cents / 25 (cents mod 25)
     quarters = cents / 25;
     cents = cents % 25;
 
@@ -35,15 +36,11 @@ int main()
     // The number of pennies is the number of remaining cents
     pennies = cents;
 
-    // Set the total to check our work
-    total = (quarters * 25) + (dimes * 10) + (nickels * 5) + pennies;
-
     // Output for the user
     cout << "Q: " << quarters << endl;
     cout << "D: " << dimes << endl;
     cout << "N: " << nickels << endl;
     cout << "P: " << pennies << endl;
-    cout << endl << "TOTAL: " << total << endl;
 
     return 0;
 }
