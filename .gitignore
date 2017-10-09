@@ -6,3 +6,9 @@
 *.obj
 *.exe
 *.out
+
+# The textbook, which I want to store in this dir but don't want on GitHub
+cs161.pdf
+
+# Apple metadata
+.DS_Store
