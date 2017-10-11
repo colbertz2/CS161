@@ -22,7 +22,7 @@ int main()
 	cout << "Please enter " << intCount << " integers." << endl;
 
 	// Repeat this block the number of times specified by the user
-	for (int i = 1; i =< intCount; i++)
+	for (int i = 1; i <= intCount; i++)
 	{
 		// Get an integer from the user
 		cin >> latestInt;
