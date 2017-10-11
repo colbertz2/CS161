@@ -13,7 +13,7 @@ using std::endl;
 // Gets a set of integers from the user, and outputs the minimum and maximum values
 int main()
 {
-	int intCount;
+	int intCount, minInt, maxInt, latestInt;
 	// Get the number of integers from the user
 	cout << "How many integers would you like to enter?" << endl;
 	cin >> intCount;
@@ -21,30 +21,36 @@ int main()
 	// Get the integers from the user and store them
 	cout << "Please enter " << intCount << " integers." << endl;
 
+	// Repeat this block the number of times specified by the user
 	for (int i = 0; i < intCount; i++)
 	{
-		int number_i;
-		
-		cin >> number_i;
+		// In the first loop only, set both variables to the user's first integer 
+		if (i = 0)
+		{
+			cin >> minInt;
+			maxInt = minInt;
+		} 
+		// In all the other loops, compare the input to the stored numbers
+		else if (i > 0)
+		{
+			cin >> latestInt;
+
+			// If the input is smaller than minInt, reassign minInt
+			if (latestInt < minInt)
+			{
+				minInt = latestInt;
+			} 
+			// If the input is larger than maxInt, reassign maxInt
+			else if (latestInt > maxInt)
+			{
+				maxInt = latestInt;
+			}
+		}
 	}
 
-	cout << "You entered " << endl;
-
-	for (int i = 0; i < intCount; i++)
-	{
-		cout << number_i; << ", ";
-	}
-
-    // If the number of integers entered is not equal to the number of integers requested
-	//     Tell the user they entered the wrong number of integers
-	//     Get choice from the user: Retry entering integers, or start over
-	//     If user chooses to start over
-	// 	    Start over
-	//     Else if user chooses to retry
-	// 	    Get the integers from the user
-    // Else
-	//     Find the minimum and maximum of the entered integers
-	//     Print those for the user
+	// Now we're done with the loop, print the min and max values
+	cout << "min: " << minInt << endl;
+	cout << "max: " << maxInt << endl;
 
     return 0;
 }
