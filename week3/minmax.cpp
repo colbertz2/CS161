@@ -22,19 +22,20 @@ int main()
 	cout << "Please enter " << intCount << " integers." << endl;
 
 	// Repeat this block the number of times specified by the user
-	for (int i = 0; i < intCount; i++)
+	for (int i = 1; i =< intCount; i++)
 	{
+		// Get an integer from the user
+		cin >> latestInt;
+
 		// In the first loop only, set both variables to the user's first integer 
-		if (i = 0)
+		if (i = 1)
 		{
-			cin >> minInt;
-			maxInt = minInt;
+			maxInt = latestInt;
+			minInt = latestInt;
 		} 
 		// In all the other loops, compare the input to the stored numbers
-		else if (i > 0)
+		else
 		{
-			cin >> latestInt;
-
 			// If the input is smaller than minInt, reassign minInt
 			if (latestInt < minInt)
 			{
