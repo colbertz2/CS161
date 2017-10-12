@@ -56,7 +56,14 @@ int main()
     }
 
     // Once the guess is right, print the counter
-    cout << "You guessed it in " << guessCount << " tries." << endl;
+    if (guessCount == 1)
+    {
+        cout << "You guessed it in " << guessCount << " try." << endl;
+    }
+    else
+    {
+        cout << "You guessed it in " << guessCount << " tries." << endl;
+    }
 
     return 0;
 }
