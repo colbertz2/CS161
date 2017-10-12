@@ -58,10 +58,12 @@ int main()
     // Once the guess is right, print the counter
     if (guessCount == 1)
     {
+        // Grammar check
         cout << "You guessed it in " << guessCount << " try." << endl;
     }
     else
     {
+        // Grammar check
         cout << "You guessed it in " << guessCount << " tries." << endl;
     }
 
