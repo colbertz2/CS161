@@ -53,7 +53,7 @@ int main()
 
         // Output the total from the above loop to our output file
         ofstream outputFile("sum.txt");
-        outputFile << ofData;
+        outputFile << ofData << endl;
 
         // We're done with the output file, close it
         outputFile.close();
