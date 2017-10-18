@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author: Zach Colbert
-** Date: 
+** Date: 18 October 2017
 ** Description: 
 *********************************************************************/
 
@@ -30,7 +30,7 @@ using std::ofstream;
 using std::string;
 
 // Function prototype
-
+void smallSort(int &argA, int &argB, int &argC);
 
 int main()
 {
@@ -43,10 +43,11 @@ int main()
 End Testing
 *********************************************************************/
 
-// Start defining actual functions here
-void myFunction()
+// Takes three integer variables by reference, and sorts them in ascending order
+void smallSort(int &argA, int &argB, int &argC)
 {
-    // Actual code goes here.
+    // Sort the values
+    
 
     return void;
 }
