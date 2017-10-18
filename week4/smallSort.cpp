@@ -35,9 +35,12 @@ void smallSort(int &argA, int &argB, int &argC);
 int main()
 {
     // Set up the variables to sort and print them
-    int a = 5;
-    int b = 17;
-    int c = 2;
+    int a, b, c;
+
+    cout << "Enter three integers:" << endl;
+    cin >> a;
+    cin >> b;
+    cin >> c;
 
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
