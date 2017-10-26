@@ -16,17 +16,13 @@ using std::ifstream;
 using std::ofstream;
 using std::string;
 
-
 int main()
 {
     Box myBox;
 
-    cout << "My box has dimensions:" << endl;
-    cout << "Height: " << myBox.getHeight() << endl;
-    cout << "Width: " << myBox.getWidth() << endl;
-    cout << "Length: " << myBox.getLength() << "\n" << endl;
+    myBox.setHeight(7.6);
 
-    cout << "My box has volume: " << myBox.calcVolume() << endl;
+    cout << myBox.calcVolume() << endl;
 
     return 0;
 }
