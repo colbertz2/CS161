@@ -36,6 +36,12 @@ class Box
 
         // PROTO: calcSurfaceArea calculates the surface area of the box
         double calcSurfaceArea();
+
+        // TEST PROTOS: Get dimensions of the box
+        double getHeight(){return height;}
+        double getWidth(){return width;}
+        double getLength(){return length;}
+
 };
 
 #endif
