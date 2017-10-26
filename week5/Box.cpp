@@ -58,7 +58,7 @@ double Box::calcVolume()
 // PROTO: calcSurfaceArea calculates the surface area of the box
 double Box::calcSurfaceArea()
 {
-    double surfaceArea = (2.0 * height) + (2.0 * width) + (2.0 * length);
+    double surfaceArea = 2.0 * ((height * width) + (length * height) + (width * length));
 
     return surfaceArea;
 }

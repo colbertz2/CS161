@@ -18,11 +18,13 @@ using std::string;
 
 int main()
 {
-    Box myBox;
+    Box myBox(2.4, 7.1, 5.0);
 
-    myBox.setHeight(7.6);
+    // myBox.setHeight(7.6);
 
     cout << myBox.calcVolume() << endl;
+
+    cout << myBox.calcSurfaceArea() << endl;
 
     return 0;
 }
