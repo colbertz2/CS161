@@ -29,13 +29,13 @@ class Box
         int setWidth(double w);
 
         // PROTO: setLength sets the length member variable
-        int setWidth(double l);
+        int setLength(double l);
 
         // PROTO: calcVolume calculates the volume of the box
         double calcVolume();
 
         // PROTO: calcSurfaceArea calculates the surface area of the box
         double calcSurfaceArea();
-}
+};
 
 #endif
