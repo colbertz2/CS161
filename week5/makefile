@@ -5,5 +5,5 @@ taxi: Taxicab.cpp Taxicab.hpp taxicabMain.cpp
 	g++ -Wall -o taxi.out Taxicab.cpp taxicabMain.cpp
 
 clean:
-	rm box.out
-	rm taxi.out
+	rm -f box.out
+	rm -f taxi.out
