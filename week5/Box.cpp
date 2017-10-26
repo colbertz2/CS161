@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Author: Zach Colbert
 ** Date: 25 October 2017
-** Description: Implementation file -- Use this to define functions for classes
+** Description: Implementation file for the Box class defines functions prototyped in Box.hpp.
 *********************************************************************/
 
 // These functions are defined for the classes in Box.hpp

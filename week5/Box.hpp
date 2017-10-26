@@ -1,7 +1,9 @@
 /*********************************************************************
 ** Author: Zach Colbert
 ** Date: 25 October 2017
-** Description: Interface file -- Use this to declare classes
+** Description: Interface file for the Box class declares the class and prototypes the member functions. Functions are defined in Box.cpp.
+
+The Box class defines a box with member variables for its dimensions of height, width, and length. It also includes member functions to construct the object, set dimensions of the box, and calculate the box's volume and surface area.
 *********************************************************************/
 
 // Box.hpp is the header file, this is the include guard
