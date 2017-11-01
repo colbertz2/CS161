@@ -17,6 +17,10 @@ private:
     std::string name;
     int points, rebounds, assists;
 
+    // setName is used by other functions to set the player's name variable
+
+    void setName(std::string nameValue);
+
 public:
     // Default constructor sets the player's name to an empty string, and sets all stats to -1
     Player();

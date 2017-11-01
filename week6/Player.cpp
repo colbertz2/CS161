@@ -18,7 +18,16 @@ Default name: ""
 Default stats: -1
 *********************************************************************/ 
 
-// Default constructor
+Player::Player()
+{
+    // Set player name to empty string
+    setName("");
+
+    // Set player stats to -1
+    setPoints(-1);
+    setRebounds(-1);
+    setAssists(-1);
+}
 
 
 /********************************************************************* 
@@ -29,7 +38,16 @@ Default stats: -1
 ** Example: Player player1(Zach, 20, 10, 0);
 *********************************************************************/ 
 
-// Constructor with arguments
+Player::Player(std::string nameString, int pointValue, int reboundValue, int assistValue)
+{
+    // Set player name from argument
+    setName(nameString);
+
+    // Set player stats from arguments
+    setPoints(pointValue);
+    setRebounds(reboundValue);
+    setAssists(assistValue);
+}
  
 
 /********************************************************************* 
@@ -38,7 +56,10 @@ Default stats: -1
 ** Usage: myPlayer.getName();
 *********************************************************************/ 
 
-// function getName
+std::string Player::getName()
+{
+    return name;
+}
 
 
 /********************************************************************* 
@@ -49,7 +70,10 @@ Default stats: -1
 ** Example: myPlayer.setPoints(7);
 *********************************************************************/ 
 
-// function setPoints
+void Player::setPoints(int pointValue)
+{
+    points = pointValue;
+}
 
 
 /********************************************************************* 
@@ -58,7 +82,10 @@ Default stats: -1
 ** Usage: myPlayer.getPoints();
 *********************************************************************/ 
 
-// function getPoints
+int Player::getPoints()
+{
+    return points;
+}
 
 
 /********************************************************************* 
@@ -69,7 +96,10 @@ Default stats: -1
 ** Example: myPlayer.setRebounds(4);
 *********************************************************************/ 
 
-// function setRebounds
+void Player::setRebounds(int reboundValue)
+{
+    rebounds = reboundValue;
+}
 
 
 /********************************************************************* 
@@ -78,7 +108,10 @@ Default stats: -1
 ** Usage: myPlayer.getRebounds();
 *********************************************************************/ 
 
-// function getRebounds
+int Player::getRebounds()
+{
+    return rebounds;
+}
 
 
 /********************************************************************* 
@@ -89,7 +122,10 @@ Default stats: -1
 ** Example: myPlayer.setAssists(10);
 *********************************************************************/ 
 
-// function setAssists
+void Player::setAssists(int assistValue)
+{
+    assists = assistValue;
+}
 
 
 /********************************************************************* 
@@ -98,7 +134,10 @@ Default stats: -1
 ** Usage: myPlayer.getAssists();
 *********************************************************************/ 
 
-// function getAssists
+int Player::getAssists()
+{
+    return assists;
+}
 
 
 /********************************************************************* 
@@ -111,4 +150,7 @@ Default stats: -1
 ** Example Output: FALSE
 *********************************************************************/ 
 
-// function hasMorePointsThan
+bool Player::hasMorePointsThan(Player argPlayer)
+{
+    return points > argPlayer.getPoints();
+}
