@@ -18,6 +18,9 @@ private:
     Player::Player pointGuard, shootingGuard, smallForward, powerForward, center;
 
 public:
+    // This class doesn't get a default constructor, because there's no "I" in "Team"
+    Team::Team(Player::Player point_Guard, Player::Player shooting_Guard, Player::Player small_Forward, Player::Player power_Forward, Player::Player center_In);
+    
     // Mutator for pointGuard
     void setPointGuard(Player::Player p);
 
