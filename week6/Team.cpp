@@ -37,70 +37,70 @@ This class does not have a default constructor because there is no "I" in "Team.
 
 
 // Mutator for pointGuard
-void setPointGuard(Player pIn)
+void Team::setPointGuard(Player pIn)
 {
     pointGuard = pIn;
 }
 
 
 // Accessor for pointGuard
-Player getPointGuard()
+Player Team::getPointGuard()
 {
     return pointGuard;
 }
 
 
 // Mutator for shootingGuard
-void setShootingGuard(Player pIn)
+void Team::setShootingGuard(Player pIn)
 {
     shootingGuard = pIn;
 }
 
 
 // Accessor for shootingGuard
-Player getShootingGuard()
+Player Team::getShootingGuard()
 {
     return shootingGuard;
 }
 
 
 // Mutator for smallForward
-void setSmallForward(Player pIn)
+void Team::setSmallForward(Player pIn)
 {
     smallForward = pIn;
 }
 
 
 // Accessor for smallForward
-Player getSmallForward()
+Player Team::getSmallForward()
 {
     return smallForward;
 }
 
 
 // Mutator for powerForward
-void setPowerForward(Player pIn)
+void Team::setPowerForward(Player pIn)
 {
     powerForward = pIn;
 }
 
 
 // Accessor for powerForward
-Player getPowerForward()
+Player Team::getPowerForward()
 {
     return powerForward;
 }
 
 
 // Mutator for center
-void setCenter(Player pIn)
+void Team::setCenter(Player pIn)
 {
     center = pIn;
 }
 
 
 // Accessor for center
-Player getCenter()
+Player Team::getCenter()
 {
     return center;
 }
@@ -112,7 +112,7 @@ Player getCenter()
 ** Example: myTeam.totalPoints();
 ** Example Output: 12;
 *********************************************************************/ 
-int totalPoints()
+int Team::totalPoints()
 {
     return pointGuard.getPoints() + shootingGuard.getPoints() + smallForward.getPoints() + powerForward.getPoints() + center.getPoints();
 }
