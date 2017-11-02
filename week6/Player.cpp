@@ -50,11 +50,7 @@ Player::Player(std::string nameString, int pointValue, int reboundValue, int ass
 }
  
 
-/********************************************************************* 
-** Description: This function of the Player class takes no arguments, and returns the string "name" member variable of a called Player object.
-
-** Usage: myPlayer.getName();
-*********************************************************************/ 
+// Accessor function for the name attribute
 
 std::string Player::getName()
 {
@@ -62,13 +58,7 @@ std::string Player::getName()
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes one argument, and modifies the integer "points" member variable of a called Player object.
-
-** Usage: myPlayer.setPoints(<pointValue>);
-
-** Example: myPlayer.setPoints(7);
-*********************************************************************/ 
+// Mutator function for the points attribute 
 
 void Player::setPoints(int pointValue)
 {
@@ -76,11 +66,7 @@ void Player::setPoints(int pointValue)
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes no arguments, and returns the integer value of the "points" member variable of a called Player object.
-
-** Usage: myPlayer.getPoints();
-*********************************************************************/ 
+// Accessor function for the points attribute
 
 int Player::getPoints()
 {
@@ -88,13 +74,7 @@ int Player::getPoints()
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes one argument, and modifies the integer "rebounds" member variable of a called Player object.
-
-** Usage: myPlayer.setRebounds(<reboundValue>);
-
-** Example: myPlayer.setRebounds(4);
-*********************************************************************/ 
+// Mutator function for the rebounds attribute
 
 void Player::setRebounds(int reboundValue)
 {
@@ -102,11 +82,7 @@ void Player::setRebounds(int reboundValue)
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes no arguments, and returns the integer value of the "rebounds" member variable of a called Player object.
-
-** Usage: myPlayer.getRebounds();
-*********************************************************************/ 
+// Accessor function for the rebounds attribute
 
 int Player::getRebounds()
 {
@@ -114,13 +90,7 @@ int Player::getRebounds()
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes one argument, and modifies the integer "assists" member variable of a called Player object.
-
-** Usage: myPlayer.setAssists(<assistValue>);
-
-** Example: myPlayer.setAssists(10);
-*********************************************************************/ 
+// Mutator function for the assists attribute
 
 void Player::setAssists(int assistValue)
 {
@@ -128,11 +98,7 @@ void Player::setAssists(int assistValue)
 }
 
 
-/********************************************************************* 
-** Description: This function of the Player class takes no arguments, and returns the integer value of the "assists" member variable of a called Player object.
-
-** Usage: myPlayer.getAssists();
-*********************************************************************/ 
+// Accessor function for the assists attribute
 
 int Player::getAssists()
 {
