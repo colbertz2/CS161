@@ -7,8 +7,9 @@
 // Pre-processing includes pre-requisite libraries for the functions below
 #include <string>
 
-// Make sure to include the header file where we declare the player class!
+// Make sure to include the header file where we declare the player and team classes!
 #include "Player.hpp"
+#include "Team.hpp"
 
 
 /********************************************************************* 
@@ -30,93 +31,81 @@ Player::Player()
 }
 
 
-/********************************************************************* 
-** Description: This constructor for the Player class takes four arguments, and sets up a player object with name and stats based on those arguments.
+// This class doesn't get a default constructor, because there's no "I" in "Team"
+//  REPLACE THIS COMMEMTN!!!!!!!
+ Team::Team(Player::Player point_Guard, Player::Player shooting_Guard, Player::Player small_Forward, Player::Player power_Forward, Player::Player center_In)
+ {
+    // Set each of the positions using mutator functions
+    setPointGuard(point_Guard);
+    setShootingGuard(shooting_Guard);
+    setSmallForward(small_Forward);
+    setPowerForward(power_Forward);
+    setCenter(center_In);
+ }
 
-** Usage: Player myPlayer(<name>, <points>, <rebounds>, <assists>);
-
-** Example: Player player1(Zach, 20, 10, 0);
-*********************************************************************/ 
-
-Player::Player(std::string nameString, int pointValue, int reboundValue, int assistValue)
+// Mutator for pointGuard
+void setPointGuard(Player::Player p)
 {
-    // Set player name from argument
-    setName(nameString);
-
-    // Set player stats from arguments
-    setPoints(pointValue);
-    setRebounds(reboundValue);
-    setAssists(assistValue);
-}
- 
-
-// Accessor function for the name attribute
-
-std::string Player::getName()
-{
-    return name;
+    pointGuard = p;
 }
 
-
-// Mutator function for the points attribute 
-
-void Player::setPoints(int pointValue)
+// Accessor for pointGuard
+Player::Player getPointGuard()
 {
-    points = pointValue;
+    return pointGuard;
 }
 
-
-// Accessor function for the points attribute
-
-int Player::getPoints()
+// Mutator for shootingGuard
+void setShootingGuard(Player::Player p)
 {
-    return points;
+    shootingGuard = p;
 }
 
-
-// Mutator function for the rebounds attribute
-
-void Player::setRebounds(int reboundValue)
+// Accessor for shootingGuard
+Player::Player getShootingGuard()
 {
-    rebounds = reboundValue;
+    return shootingGuard;
 }
 
-
-// Accessor function for the rebounds attribute
-
-int Player::getRebounds()
+// Mutator for smallForward
+void setSmallForward(Player::Player p)
 {
-    return rebounds;
+    smallForward = p;
 }
 
-
-// Mutator function for the assists attribute
-
-void Player::setAssists(int assistValue)
+// Accessor for smallForward
+Player::Player getSmallForward()
 {
-    assists = assistValue;
+    return smallForward;
 }
 
-
-// Accessor function for the assists attribute
-
-int Player::getAssists()
+// Mutator for powerForward
+void setPowerForward(Player::Player p)
 {
-    return assists;
+    powerForward = p;
 }
 
-
-/********************************************************************* 
-** Description: This function of the Player class takes one Player object as an argument, and returns a boolean value. It compares the points stats of the called Player object and the argument Player object, and returns TRUE if the value of the called player's points is greater than the value of the argument player's points. In the converse case, it returns FALSE.
-
-** Usage: myPlayer.hasMorePointsThan(<otherPlayer>);
-
-** Example Input: player1.hasMorePointsThan(player2);
-
-** Example Output: FALSE
-*********************************************************************/ 
-
-bool Player::hasMorePointsThan(Player argPlayer)
+// Accessor for powerForward
+Player::Player getPowerForward()
 {
-    return points > argPlayer.getPoints();
+    return powerForward;
+}
+
+// Mutator for center
+void setCenter(Player::Player p)
+{
+    center = p;
+}
+
+// Accessor for center
+Player::Player getCenter()
+{
+    return center;
+}
+
+// totalPoints gets the points attribute from each of the member variables, and returns the total
+// REPLACE THIS COMMENT!!!!!!!!
+int totalPoints()
+{
+    return pointGuard.getPoints() + shootingGuard.getPoints() + smallForward.getPoints() + powerForward.getPoints() + center.getPoints();
 }
