@@ -18,9 +18,6 @@ private:
     Player::Player pointGuard, shootingGuard, smallForward, powerForward, center;
 
 public:
-    // Comment
-    void function(dtype argument);
-
     // Mutator for pointGuard
     void setPointGuard(Player::Player p);
 
