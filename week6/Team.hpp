@@ -5,53 +5,54 @@
 *********************************************************************/ 
 
 #include <string>
+#include "Player.hpp"
 
-#ifndef PLAYER_HPP
-#define PLAYER_HPP
+#ifndef TEAM_HPP
+#define TEAM_HPP
 
 
-class Player
+class Team
 {
 private:
-    // Member variables are for player name and stats
-    std::string name;
-    int points, rebounds, assists;
-
-    // setName is used by other functions to set the player's name variable
-
-    void setName(std::string nameValue);
+    // Member variables for each position on the team
+    Player::Player pointGuard, shootingGuard, smallForward, powerForward, center;
 
 public:
-    // Default constructor sets the player's name to an empty string, and sets all stats to -1
-    Player();
+    // Comment
+    void function(dtype argument);
 
-    // Constructor with 4 arguments sets the player's name and all three of the stats
-    Player(std::string nameString, int pointValue, int reboundValue, int assistValue);
-    
-    // getName returns the player's name
-    std::string getName();
+    // Mutator for pointGuard
+    void setPointGuard(Player::Player p);
 
-    // setPoints sets the value of the points stat
-    void setPoints(int pointValue);
+    // Accessor for pointGuard
+    Player::Player getPointGuard();
 
-    // getPoints returns the value of the points stat
-    int getPoints();
+    // Mutator for shootingGuard
+    void setShootingGuard(Player::Player p);
 
-    // setRebounds sets the value of the rebounds stat
-    void setRebounds(int reboundValue);
+    // Accessor for shootingGuard
+    Player::Player getShootingGuard();
 
-    // getRebounds returns the value of the rebounds stat
-    int getRebounds();
+    // Mutator for smallForward
+    void setSmallForward(Player::Player p);
 
-    // setAssists sets the value of the assists stat
-    void setAssists(int assistValue);
+    // Accessor for smallForward
+    Player::Player getSmallForward();
 
-    // getAssists returns the value of the assists stat
-    int getAssists();
+    // Mutator for powerForward
+    void setPowerForward(Player::Player p);
 
-    // hasMorePointsThan takes another player object as input
-    // Function returns boolean TRUE if the value of the called player's points stat is greater than the value of the argument player's points stat
-    bool hasMorePointsThan(Player argPlayer);
+    // Accessor for powerForward
+    Player::Player getPowerForward();
+
+    // Mutator for center
+    void setCenter(Player::Player p);
+
+    // Accessor for center
+    Player::Player getCenter();
+
+    // totalPoints gets the points attribute from each of the member variables, and returns the total
+    int totalPoints();
 
 };
 
