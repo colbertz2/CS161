@@ -48,7 +48,14 @@ Player::Player(std::string nameString, int pointValue, int reboundValue, int ass
     setRebounds(reboundValue);
     setAssists(assistValue);
 }
- 
+
+
+// Mutator function for the name attribute (private)
+void Player::setName(std::string nameValue)
+{
+    name = nameValue;
+}
+
 
 // Accessor function for the name attribute
 
