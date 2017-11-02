@@ -107,7 +107,7 @@ int Player::getAssists()
 
 
 /********************************************************************* 
-** Description: This function of the Player class takes one Player object as an argument, and returns a boolean value. It compares the points stats of the called Player object and the argument Player object, and returns TRUE if the value of the called player's points is greater than the value of the argument player's points. In the converse case, it returns FALSE.
+** Description: This function of the Player class takes one Player object as an argument, and returns a boolean value. It compares the points stats of the called Player object and the argument Player object, and returns TRUE if the value of the called player's points is greater than the value of the argument player's points. Otherwise, it returns FALSE.
 
 ** Usage: myPlayer.hasMorePointsThan(<otherPlayer>);
 
