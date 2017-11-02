@@ -37,9 +37,9 @@ This class does not have a default constructor because there is no "I" in "Team.
 
 
 // Mutator for pointGuard
-void setPointGuard(Player p)
+void setPointGuard(Player pIn)
 {
-    pointGuard = p;
+    pointGuard = pIn;
 }
 
 
@@ -51,9 +51,9 @@ Player getPointGuard()
 
 
 // Mutator for shootingGuard
-void setShootingGuard(Player p)
+void setShootingGuard(Player pIn)
 {
-    shootingGuard = p;
+    shootingGuard = pIn;
 }
 
 
@@ -65,9 +65,9 @@ Player getShootingGuard()
 
 
 // Mutator for smallForward
-void setSmallForward(Player p)
+void setSmallForward(Player pIn)
 {
-    smallForward = p;
+    smallForward = pIn;
 }
 
 
@@ -79,9 +79,9 @@ Player getSmallForward()
 
 
 // Mutator for powerForward
-void setPowerForward(Player p)
+void setPowerForward(Player pIn)
 {
-    powerForward = p;
+    powerForward = pIn;
 }
 
 
@@ -93,9 +93,9 @@ Player getPowerForward()
 
 
 // Mutator for center
-void setCenter(Player p)
+void setCenter(Player pIn)
 {
-    center = p;
+    center = pIn;
 }
 
 
