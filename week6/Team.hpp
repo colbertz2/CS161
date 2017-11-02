@@ -15,41 +15,41 @@ class Team
 {
 private:
     // Member variables for each position on the team
-    Player::Player pointGuard, shootingGuard, smallForward, powerForward, center;
+    Player pointGuard, shootingGuard, smallForward, powerForward, center;
 
 public:
     // This class doesn't get a default constructor, because there's no "I" in "Team"
-    Team::Team(Player::Player point_Guard, Player::Player shooting_Guard, Player::Player small_Forward, Player::Player power_Forward, Player::Player center_In);
+    Team::Team(Player point_Guard, Player shooting_Guard, Player small_Forward, Player power_Forward, Player center_In);
     
     // Mutator for pointGuard
-    void setPointGuard(Player::Player p);
+    void setPointGuard(Player p);
 
     // Accessor for pointGuard
-    Player::Player getPointGuard();
+    Player getPointGuard();
 
     // Mutator for shootingGuard
-    void setShootingGuard(Player::Player p);
+    void setShootingGuard(Player p);
 
     // Accessor for shootingGuard
-    Player::Player getShootingGuard();
+    Player getShootingGuard();
 
     // Mutator for smallForward
-    void setSmallForward(Player::Player p);
+    void setSmallForward(Player p);
 
     // Accessor for smallForward
-    Player::Player getSmallForward();
+    Player getSmallForward();
 
     // Mutator for powerForward
-    void setPowerForward(Player::Player p);
+    void setPowerForward(Player p);
 
     // Accessor for powerForward
-    Player::Player getPowerForward();
+    Player getPowerForward();
 
     // Mutator for center
-    void setCenter(Player::Player p);
+    void setCenter(Player p);
 
     // Accessor for center
-    Player::Player getCenter();
+    Player getCenter();
 
     // totalPoints gets the points attribute from each of the member variables, and returns the total
     int totalPoints();

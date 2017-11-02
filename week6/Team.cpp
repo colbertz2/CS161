@@ -25,7 +25,7 @@ This class does not have a default constructor because there is no "I" in "Team.
 
 ** Example: Team::Team myTeam(pointGuard, shootingGuard, smallForward, powerForward, center);
 *********************************************************************/ 
- Team::Team(Player::Player point_Guard, Player::Player shooting_Guard, Player::Player small_Forward, Player::Player power_Forward, Player::Player center_In)
+ Team::Team(Player point_Guard, Player shooting_Guard, Player small_Forward, Player power_Forward, Player center_In)
  {
     // Set each of the positions using mutator functions
     setPointGuard(point_Guard);
@@ -37,70 +37,70 @@ This class does not have a default constructor because there is no "I" in "Team.
 
 
 // Mutator for pointGuard
-void setPointGuard(Player::Player p)
+void setPointGuard(Player p)
 {
     pointGuard = p;
 }
 
 
 // Accessor for pointGuard
-Player::Player getPointGuard()
+Player getPointGuard()
 {
     return pointGuard;
 }
 
 
 // Mutator for shootingGuard
-void setShootingGuard(Player::Player p)
+void setShootingGuard(Player p)
 {
     shootingGuard = p;
 }
 
 
 // Accessor for shootingGuard
-Player::Player getShootingGuard()
+Player getShootingGuard()
 {
     return shootingGuard;
 }
 
 
 // Mutator for smallForward
-void setSmallForward(Player::Player p)
+void setSmallForward(Player p)
 {
     smallForward = p;
 }
 
 
 // Accessor for smallForward
-Player::Player getSmallForward()
+Player getSmallForward()
 {
     return smallForward;
 }
 
 
 // Mutator for powerForward
-void setPowerForward(Player::Player p)
+void setPowerForward(Player p)
 {
     powerForward = p;
 }
 
 
 // Accessor for powerForward
-Player::Player getPowerForward()
+Player getPowerForward()
 {
     return powerForward;
 }
 
 
 // Mutator for center
-void setCenter(Player::Player p)
+void setCenter(Player p)
 {
     center = p;
 }
 
 
 // Accessor for center
-Player::Player getCenter()
+Player getCenter()
 {
     return center;
 }
