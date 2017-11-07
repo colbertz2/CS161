@@ -31,12 +31,32 @@ int main()
 
 void testMedian()
 {
+    system("clear");
+    
+    cout << "Testing findMedian..." << endl;
+    
     int testArray[] = {1,2,3,4,5,6};
     
-    cout << findMedian(testArray, 6) << endl;
+    for (int i : testArray)
+    {
+        cout << i << ", ";
+    }
+    cout << endl;
+    cout << "Median: " << findMedian(testArray, 6) << endl;
+
+    system("read -p 'Press enter to continue...'");
 }
 
 void testDev()
 {
+    system("clear");
+
+    cout << "Testing stdDev..." << endl;
+    
     Person person1("Zach", 20);
+
+    cout << "Name: " << person1.getName() << endl;
+    cout << "Age: " << person1.getAge() << endl;
+
+    system("read -p 'Press enter to continue...'");
 }
