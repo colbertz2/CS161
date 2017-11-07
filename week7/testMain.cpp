@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "Person.hpp"
 
 using std::cout;
 using std::cin;
@@ -9,9 +10,12 @@ using std::ifstream;
 using std::ofstream;
 using std::string;
 
-// Function prototype
+// Function prototypes
 void testMedian();
 void testDev();
+
+int findMedian(int arrayArg[], int arraySize);
+
 
 int main()
 {
