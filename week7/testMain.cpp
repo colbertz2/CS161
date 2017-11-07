@@ -15,6 +15,7 @@ void testMedian();
 void testDev();
 
 int findMedian(int arrayArg[], int arraySize);
+double stdDev(Person arrayArg[], int arraySize);
 
 
 int main()
@@ -35,14 +36,14 @@ void testMedian()
     
     cout << "Testing findMedian..." << endl;
     
-    int testArray[] = {1,2,3,4,5,6};
+    int testArray[] = {9,5,4,7,6};
     
     for (int i : testArray)
     {
         cout << i << ", ";
     }
     cout << endl;
-    cout << "Median: " << findMedian(testArray, 6) << endl;
+    cout << "Median: " << findMedian(testArray, 5) << endl;
 
     system("read -p 'Press enter to continue...'");
 }
@@ -53,10 +54,19 @@ void testDev()
 
     cout << "Testing stdDev..." << endl;
     
-    Person person1("Zach", 20);
+    Person a("Zach", 20);
+    Person b("John", 25);
+    Person c("Jim", 30);
+    Person people[] = {a,b,c};
 
-    cout << "Name: " << person1.getName() << endl;
-    cout << "Age: " << person1.getAge() << endl;
+    for (Person person : people)
+    {
+        cout << "Name: " << person.getName() << endl;
+        cout << "Age: " << person.getAge() << "\n" << endl;
+    }
+
+    double testResult = stdDev(people, 3);
+    cout << testResult << endl;
 
     system("read -p 'Press enter to continue...'");
 }

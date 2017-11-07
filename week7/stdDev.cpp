@@ -18,6 +18,7 @@ double stdDev(Person arrayArg[], int arraySize)
         averageAge += arrayArg[i].getAge();
     }
 
+    averageAge /= arraySize;
 
     // Calculate the standard deviation
     double stndDev = 0.0;
@@ -27,5 +28,5 @@ double stdDev(Person arrayArg[], int arraySize)
         stndDev += std::pow(arrayArg[i].getAge() - averageAge, 2);
     }
 
-    return stndDev / arraySize;
+    return sqrt(stndDev / arraySize);
 }

@@ -1,2 +1,2 @@
 all: findMedian.cpp testMain.cpp
-	g++ -Wall -std=c++0x findMedian.cpp testMain.cpp -o findMedian.out
+	g++ -Wall -std=c++0x findMedian.cpp Person.cpp stdDev.cpp testMain.cpp -o testMain.out
