@@ -10,10 +10,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void repeatArray(int *& myArray, int myArraySize)
+void repeatArray(double *& myArray, int myArraySize)
 {
     // Make new array
-    int *newArray = new int[myArraySize * 2];
+    double *newArray = new double[myArraySize * 2];
 
     // Fill array with original array values
     for (int i = 0; i < myArraySize * 2; i++)

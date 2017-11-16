@@ -5,20 +5,20 @@ using std::cin;
 using std::endl;
 
 // Function prototype
-void repeatArray(int *&, int);
+void repeatArray(double *&, int);
 
 int main()
 {
     // Variable declarations
-    int arraySize,
-        *myArray = nullptr;      // Size of the array, user defined
+    int arraySize;              // Size of the array, user defined
+    double *myArray = nullptr;  // The pointer to the array
     
     // Get array size from user
     cout << "Array size: " ;
     cin >> arraySize;
 
     // Dynamically allocate memory for that size array
-    myArray = new int[arraySize];
+    myArray = new double[arraySize];
 
     // Fill the array
     srand(time(NULL));
