@@ -10,9 +10,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+// smallSort2 takes the addresses of three int variables, and sorts the ints at their respective addresses.
 void smallSort2(int *a, int *b, int *c)
 {
-    // If a is larger than b
+    // While a is larger than b
     while (*a > *b)
     {
         // Swap them
@@ -29,19 +30,4 @@ void smallSort2(int *a, int *b, int *c)
             *c = temp;
         }
     }
-}
-
-
-
-int main()
-{
-    int a = 14;
-    int b = -90;
-    int c = 2;
-
-    smallSort2(&a, &b, &c);
-
-    cout << a << ", " << b << ", " << c << endl;
-
-    return 0;
 }
