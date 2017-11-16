@@ -10,56 +10,38 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void smallSort2(int &a, int &b, int &c)
-{
-    // Do the thing
-}
-
-// Takes three integer variables by reference, and sorts them in ascending order
-void smallSort(int &argA, int &argB, int &argC)
+void smallSort2(int *a, int *b, int *c)
 {
     // If a is larger than b
-    while (argA > argB)
+    while (*a > *b)
     {
         // Swap them
-        int temp = argA;
-        argA = argB;
-        argB = temp;
+        int temp = *a;
+        *a = *b;
+        *b = temp;
 
-        // If b is larger than c
-        while (argB > argC)
+        // While b is larger than c
+        while (*b > *c)
         {
             // Swap them
-            int temp = argB;
-            argB = argC;
-            argC = temp;
+            int temp = *b;
+            *b = *c;
+            *c = temp;
         }
     }
 }
 
+
+
 int main()
 {
-    // Set up the variables to sort and print them
-    int a, b, c;
+    int a = 14;
+    int b = -90;
+    int c = 2;
 
-    cout << "Enter three integers:" << endl;
-    cin >> a;
-    cin >> b;
-    cin >> c;
+    smallSort2(&a, &b, &c);
 
-    cout << "a = " << a << endl;
-    cout << "b = " << b << endl;
-    cout << "c = " << c << endl;
-
-    // Pass them to the function
-    smallSort(a,b,c);
-
-    cout << "\n" << "Sorting..." << "\n" << endl;
-
-    // Print them out after sorting
-    cout << "a = " << a << endl;
-    cout << "b = " << b << endl;
-    cout << "c = " << c << endl;
+    cout << a << ", " << b << ", " << c << endl;
 
     return 0;
 }
