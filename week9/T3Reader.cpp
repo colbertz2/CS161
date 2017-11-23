@@ -1,39 +1,37 @@
 /*********************************************************************
 ** Author: Zach Colbert
 ** Date: 22 November 2017
-** Description: 
+** Description: The T3Reader class interacts with the Board class to 
+"play" a game of tic-tac-toe based on a set of instructions read from 
+a text file. It features a simple constructor and a member function to 
+feed the input file to.
 *********************************************************************/
 
-/*
-Write a class called T3Reader that uses the Board class to re-run a game of TicTacToe from moves that it reads from a text file. This class will have a field for a Board object and a field to keep track of which player's turn it is. 
-
-It should have a constructor that takes a char parameter that specifies whether 'x' or 'o' should have the first move. 
-
-It should have a method called readGameFile that takes a string parameter that gives the name of the game file. The readGameFile method should keep looping, reading a move from the file, and sending it to the board (with makeMove).  The readGameFile method should return false if any of the moves is for a square that was already occupied, or if there are still additional moves in the file after the game has finished.  Otherwise it should return true.  
-
-Make sure you close the input file in every case.
-*/
-
-// INCLUDES GO HERE
 #include "T3Reader.hpp"
-#include <iostream>
 #include <fstream>
 #include <string>
 
-using std::cin;
-using std::cout;
-using std::endl;
 using std::string;
 
 
-// ADD DOCUMENTATION!
+// The constructor takes a char argument to indicate which "player" 
+// will go first in the game
 T3Reader::T3Reader(char firstTurn)
 {
     nextTurn = firstTurn;
 }
 
 
-// ADD DOCUMENTATION!
+/*********************************************************************
+** Description: readGameFile takes a string argument for the name of 
+the input file. It reads the text file line by line, passing 
+instructions to the makeMove function of the Board class.
+It checks the state of the game after each move, returning false if 
+the instructions continue beyond the end of the game. It also returns 
+false when it encounters an illegal move.
+After each move, it toggles the game piece that is placed in the 
+succeeding turn.
+*********************************************************************/
 bool T3Reader::readGameFile(string fileName)
 {
     // Initialize variables to store the coords and results for each move
