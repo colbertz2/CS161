@@ -40,14 +40,18 @@ void printGameState(State gameState)
     {
         case 0: 
             cout << "Game State: X_WON" << endl;
+            break;
 
         case 1:
             cout << "Game State: O_WON" << endl;
+            break;
 
         case 2:
             cout << "Game State: DRAW" << endl;
+            break;
 
         case 3:
             cout << "Game State: UNFINISHED" << endl;
+            break;
     }
 }
