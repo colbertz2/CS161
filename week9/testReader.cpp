@@ -15,7 +15,7 @@ bool testFunction(int &x);
 int main()
 {
     // Initialize a new game
-    T3Reader newGame('x');
+    T3Reader newGame('o');
 
     bool gameResult = newGame.readGameFile("inputText.txt");
 
