@@ -69,7 +69,7 @@ State Board::gameState()
 
 
 // printBoard is an accessor for debugging
-char Board::printBoard()
+void Board::printBoard()
 {
     // Reminder: Array[y][x]
 

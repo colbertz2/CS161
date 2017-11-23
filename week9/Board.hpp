@@ -40,7 +40,7 @@ class Board
         State gameState();
 
         // printBoard is for debugging
-        char printBoard();
+        void printBoard();
 
 };
 
