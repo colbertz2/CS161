@@ -43,7 +43,8 @@ bool T3Reader::readGameFile(string fileName)
     bool moveResult;
     
     // Open the input file
-    std::ifstream inFile(fileName);
+    std::ifstream inFile;
+    inFile.open(fileName);
 
     // Loop until the end of the file
     while (inFile >> xCoord >> yCoord)
