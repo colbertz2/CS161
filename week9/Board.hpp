@@ -23,6 +23,7 @@ using std::string;
 // Enumerated data type for the game state. Describes which player, if any, has won the game, or if the game ended in a draw.
 enum State {X_WON, O_WON, DRAW, UNFINISHED};
 
+// ADD DOCUMENTATION?!?
 class Board
 {
     private:
