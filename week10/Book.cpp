@@ -26,7 +26,7 @@ Book::Book(std::string idc, std::string t, std::string a)
 *********************************************************************/
 int Book::getCheckOutLength()
 {
-
+    return CHECK_OUT_LENGTH;
 }
 
 
@@ -35,7 +35,7 @@ int Book::getCheckOutLength()
 *********************************************************************/
 std::string Book::getIdCode()
 {
-
+    return idCode;
 }
 
 
@@ -44,7 +44,7 @@ std::string Book::getIdCode()
 *********************************************************************/
 std::string Book::getTitle()
 {
-    
+    return title;
 }
 
 
@@ -53,7 +53,7 @@ std::string Book::getTitle()
 *********************************************************************/
 std::string Book::getAuthor()
 {
-
+    return author;
 }
 
 
@@ -62,7 +62,7 @@ std::string Book::getAuthor()
 *********************************************************************/
 Locale Book::getLocation()
 {
-
+    return location;
 }
 
 
@@ -80,7 +80,7 @@ void Book::setLocation(Locale)
 *********************************************************************/
 Patron* Book::getCheckedOutBy()
 {
-
+    return checkedOutBy;
 }
 
 
@@ -98,7 +98,7 @@ void Book::setCheckedOutBy(Patron*)
 *********************************************************************/
 Patron* Book::getRequestedBy()
 {
-
+    return requestedBy;
 }
 
 
@@ -116,7 +116,7 @@ void Book::setRequestedBy(Patron*)
 *********************************************************************/
 int Book::getDateCheckedOut()
 {
-
+    return dateCheckedOut;
 }
 
 
