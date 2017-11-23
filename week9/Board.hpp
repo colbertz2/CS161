@@ -13,8 +13,9 @@ There should be a method called gameState that takes no parameters and returns o
 */
 
 // INCLUDES GO HERE
+#include <string>
 
-
+using std::string;
 
 #ifndef BOARD_HPP
 #define BOARD_HPP
@@ -27,7 +28,6 @@ class Board
     private:
         char gameBoard[3][3];
 
-        State gameProgress;
 
     public:
         // The default constructor sets all board spaces to an empty (space) character
@@ -36,7 +36,7 @@ class Board
         // makeMove takes int coordinates and a char representing a game piece and changes the corresponding space on the board
         bool makeMove(int xCoord, int yCoord, char gamePiece);
 
-        // gameState is an accessor for the gameProgress variable
+        // gameState determines the state of the game--if either player has won, if the game is a draw, or if the game is still in progress
         State gameState();
 
         // printBoard is for debugging
