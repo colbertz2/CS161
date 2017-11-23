@@ -25,7 +25,7 @@ class T3Reader
 {
     private:
         // Board object for the game
-        Board::Board gameBoard;
+        Board gameBoard;
 
         // Which player goes next
         char nextTurn;
