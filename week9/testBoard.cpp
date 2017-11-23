@@ -20,14 +20,40 @@ int main()
 
     // Print the board to make sure it's empty
     myBoard.printBoard();
-
-    // Print the game state
     printGameState(myBoard.gameState());
 
     // Make a move
     myBoard.makeMove(0, 0, 'x');
 
-    // Print the board and game state again
+    // Print the board to make sure it's empty
+    myBoard.printBoard();
+    printGameState(myBoard.gameState());
+
+    // Make a move
+    myBoard.makeMove(0, 0, 'o');
+
+    // Print the board to make sure it's empty
+    myBoard.printBoard();
+    printGameState(myBoard.gameState());
+
+    // Make a move
+    myBoard.makeMove(0, 1, 'x');
+
+    // Print the board to make sure it's empty
+    myBoard.printBoard();
+    printGameState(myBoard.gameState());
+
+    // Make a move
+    myBoard.makeMove(1, 1, 'o');
+
+    // Print the board to make sure it's empty
+    myBoard.printBoard();
+    printGameState(myBoard.gameState());
+
+    // Make a move
+    myBoard.makeMove(0, 2, 'x');
+
+    // Print the board to make sure it's empty
     myBoard.printBoard();
     printGameState(myBoard.gameState());
 

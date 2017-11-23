@@ -10,10 +10,16 @@ using std::cout;
 using std::endl;
 using std::string;
 
+bool testFunction(int &x);
+
 int main()
 {
-    // Initialize a new reader object, and print the output
-    cout << T3Reader::T3Reader newGame ("textInput.txt") << endl;
+    // Initialize a new game
+    T3Reader newGame('x');
+
+    bool gameResult = newGame.readGameFile("inputText.txt");
+
+    cout << gameResult << endl;
 
     return 0;
 }
