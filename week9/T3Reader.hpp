@@ -18,6 +18,8 @@ Make sure you close the input file in every case.
 #include "Board.hpp"
 #include <string>
 
+#ifndef T3READER_HPP
+#define T3READER_HPP
 
 class T3Reader
 {
@@ -36,3 +38,5 @@ class T3Reader
         bool readGameFile(std::string fileName);
 
 };
+
+#endif
