@@ -20,110 +20,74 @@ Book::Book(std::string idc, std::string t, std::string a)
 
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the GET_CHECKOUT_LENGTH const
 int Book::getCheckOutLength()
 {
     return CHECK_OUT_LENGTH;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the idCode variable
 std::string Book::getIdCode()
 {
     return idCode;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the title variable
 std::string Book::getTitle()
 {
     return title;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the author variable
 std::string Book::getAuthor()
 {
     return author;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the location variable
 Locale Book::getLocation()
 {
     return location;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
-void Book::setLocation(Locale)
+// Sets the location variable
+void Book::setLocation(Locale newLoc)
 {
-
+    location = newLoc;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the checkedOutBy variable
 Patron* Book::getCheckedOutBy()
 {
     return checkedOutBy;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
-void Book::setCheckedOutBy(Patron*)
+// Sets the checkedOutBy variable
+void Book::setCheckedOutBy(Patron* newCheckout)
 {
-
+    checkedOutBy = newCheckout;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the requestedBy variable
 Patron* Book::getRequestedBy()
 {
     return requestedBy;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
-void Book::setRequestedBy(Patron*)
+// Sets the requestedBy variable
+void Book::setRequestedBy(Patron* newRequest)
 {
-
+    requestedBy = newRequest;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
+// Accesses the dateCheckedOut variable
 int Book::getDateCheckedOut()
 {
     return dateCheckedOut;
 }
 
-
-/*********************************************************************
-** Description: 
-*********************************************************************/
-void Book::setDateCheckedOut(int)
+// Sets the dateCheckedOut variable
+void Book::setDateCheckedOut(int checkoutDate)
 {
-
+    dateCheckedOut = checkoutDate;
 }
