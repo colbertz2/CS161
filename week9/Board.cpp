@@ -31,7 +31,7 @@ Board::Board()
     {
         for (int j = 0; j < 3; j++)
         {
-            gameBoard[i][j] = 'o';
+            gameBoard[i][j] = '=';
         }
     }
 }
