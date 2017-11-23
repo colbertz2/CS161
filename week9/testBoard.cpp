@@ -16,7 +16,7 @@ void printGameState(State gameState);
 int main()
 {
     // Initialize a new board
-    Board::Board myBoard;
+    Board myBoard;
 
     // Print the board to make sure it's empty
     myBoard.printBoard();
