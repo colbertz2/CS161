@@ -17,7 +17,7 @@ int main()
     // Initialize a new game
     T3Reader newGame('x');
 
-    cout << newGame.readGameFile("/Users/colbertz/Developer/cs161/week9/textInput.txt") << endl;
-    
+    cout << newGame.readGameFile("textInput.txt") << endl;
+
     return 0;
 }
