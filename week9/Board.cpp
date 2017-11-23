@@ -43,7 +43,7 @@ bool Board::makeMove(int xCoord, int yCoord, char gamePiece)
     // Reminder: Array[row][col]
 
     // If the space is already taken
-    if (gameBoard[yCoord][xCoord] != ' ')
+    if (gameBoard[yCoord][xCoord] != '=')
     {
         // Illegal move
         return false;
@@ -61,9 +61,6 @@ bool Board::makeMove(int xCoord, int yCoord, char gamePiece)
 // ADD DOCUMENTATION!
 State Board::gameState()
 {
-    // Temp variable to store the game state
-    State state;
-
     // usedSpaces counts the number of non-empty spaces
     int usedSpaces = 0;
 
@@ -84,24 +81,24 @@ State Board::gameState()
                 // Check adjacents vertically
                 if (gameBoard[y+1][x] == 'o' && gameBoard[y-1][x] == 'o')
                 {
-                    state = O_WON;
+                    return O_WON;
                 }
 
                 // Check adjacents horizontally
-                if (gameBoard[y][x+1] == 'o' && gameBoard[y][x-1] == 'o')
+                else if (gameBoard[y][x+1] == 'o' && gameBoard[y][x-1] == 'o')
                 {
-                    state = O_WON;
+                    return O_WON;
                 }
 
                 // Check adjacents on the diagonals
-                if (gameBoard[y+1][x-1] == 'o' && gameBoard[y-1][x+1] == 'o')
+                else if (gameBoard[y+1][x-1] == 'o' && gameBoard[y-1][x+1] == 'o')
                 {
-                    state = O_WON;
+                    return O_WON;
                 }
 
-                if (gameBoard[y+1][x+1] == 'o' && gameBoard[y-1][x-1] == 'o')
+                else if (gameBoard[y+1][x+1] == 'o' && gameBoard[y-1][x-1] == 'o')
                 {
-                    state = O_WON;
+                    return O_WON;
                 }
             }
 
@@ -111,43 +108,37 @@ State Board::gameState()
                 // Check adjacents vertically
                 if (gameBoard[y+1][x] == 'x' && gameBoard[y-1][x] == 'x')
                 {
-                    state = X_WON;
+                    return X_WON;
                 }
 
                 // Check adjacents horizontally
-                if (gameBoard[y][x+1] == 'x' && gameBoard[y][x-1] == 'x')
+                else if (gameBoard[y][x+1] == 'x' && gameBoard[y][x-1] == 'x')
                 {
-                    state = X_WON;
+                    return X_WON;
                 }
 
                 // Check adjacents on the diagonals
-                if (gameBoard[y+1][x-1] == 'x' && gameBoard[y-1][x+1] == 'x')
+                else if (gameBoard[y+1][x-1] == 'x' && gameBoard[y-1][x+1] == 'x')
                 {
-                    state = X_WON;
+                    return X_WON;
                 }
 
-                if (gameBoard[y+1][x+1] == 'x' && gameBoard[y-1][x-1] == 'x')
+                else if (gameBoard[y+1][x+1] == 'x' && gameBoard[y-1][x-1] == 'x')
                 {
-                    state = X_WON;
+                    return X_WON;
                 }
             }
         }
     }
 
-    // While there is no winner
-    while (state != O_WON || state != X_WON)
+    // While there is no winner 
+    // If all the spaces are full, it's a draw
+    if (usedSpaces == 9)
     {
-        // The game is incomplete until all spaces are full
-        state = UNFINISHED;
-        
-        // If all the spaces are full, it's a draw
-        if (usedSpaces == 9)
-        {
-            state = DRAW;
-        } 
+        return DRAW;
     }
 
-    return state;
+    return UNFINISHED;
 }
 
 
