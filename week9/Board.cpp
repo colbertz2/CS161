@@ -74,13 +74,16 @@ void Board::printBoard()
     // Reminder: Array[y][x]
 
     // Print the array upside-down, so it makes sense graphically
-    for (int y = 3; y >= 0; y--)
+    for (int y = 2; y >= 0; y--)
     {
+        cout << "| ";
+        
         for (int x = 0; x < 3; x++)
         {
             cout << gameBoard[y][x] << " | ";
         }
 
         cout << endl;
+
     }
 }
