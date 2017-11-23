@@ -15,11 +15,9 @@ bool testFunction(int &x);
 int main()
 {
     // Initialize a new game
-    T3Reader newGame('o');
+    T3Reader newGame('x');
 
-    bool gameResult = newGame.readGameFile("inputText.txt");
-
-    cout << gameResult << endl;
-
+    cout << newGame.readGameFile("/Users/colbertz/Developer/cs161/week9/textInput.txt") << endl;
+    
     return 0;
 }

@@ -30,7 +30,7 @@ int main()
     printGameState(myBoard.gameState());
 
     // Make a move
-    myBoard.makeMove(0, 0, 'o');
+    myBoard.makeMove(1, 0, 'o');
 
     // Print the board to make sure it's empty
     myBoard.printBoard();

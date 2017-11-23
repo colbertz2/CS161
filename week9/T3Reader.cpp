@@ -10,8 +10,11 @@ feed the input file to.
 #include "T3Reader.hpp"
 #include <fstream>
 #include <string>
+#include <iostream>
 
 using std::string;
+using std::cout;
+using std::endl;
 
 
 // The constructor takes a char argument to indicate which "player" 
@@ -36,6 +39,7 @@ bool T3Reader::readGameFile(string fileName)
 {
     // Initialize variables to store the coords and results for each move
     int xCoord, yCoord;
+    int breakReturn = 0;
     bool moveResult;
     
     // Open the input file
@@ -49,7 +53,8 @@ bool T3Reader::readGameFile(string fileName)
         {
             // Make sure to close the file!
             inFile.close();
-            return false;
+            breakReturn = 1;
+            break;
         }
         
         // Otherwise, record the result of each move
@@ -60,7 +65,8 @@ bool T3Reader::readGameFile(string fileName)
         {
             // Make sure to close the file!
             inFile.close();
-            return false;
+            breakReturn = 1;
+            break;
         }
 
         // Toggle the next player
@@ -74,7 +80,15 @@ bool T3Reader::readGameFile(string fileName)
         }
     }
 
-    // If you got this far, it worked! Close the file and return true.
-    inFile.close();
-    return true;
+    // Return false for the things that break the while loop
+    if (breakReturn == 1)
+    {
+        return false;
+    }
+    else
+    {
+        // If you got this far, it worked! Close the file and return true.
+        inFile.close();
+        return true;
+    }
 }
