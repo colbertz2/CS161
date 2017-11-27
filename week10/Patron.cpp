@@ -17,6 +17,14 @@
 *********************************************************************/
 Patron::Patron(std::string idn, std::string n)
 {
+    // Set patron ID number (manually, because we don't have a set function)
+    idNum = idn;
+
+    // Set patron name
+    name = n;
+
+    // Initialize fine amount to zero for new patrons
+    fineAmount = 0.0;
 
 }
 
@@ -42,14 +50,18 @@ std::vector<Book*> Patron::getCheckedOutBooks()
 }
 
 
-// Description
+/*********************************************************************
+** Description:
+*********************************************************************/
 void Patron::addBook(Book* b)
 {
 
 }
 
 
-// Description
+/*********************************************************************
+** Description:
+*********************************************************************/
 void Patron::removeBook(Book* b)
 {
 
@@ -63,8 +75,12 @@ double Patron::getFineAmount()
 }
 
 
-// Description
+/*********************************************************************
+** Description:
+*********************************************************************/
 void Patron::amendFine(double amount)
 {
+    // Add (or subtract, if it's negative) the given amount to the existing fine
+    fineAmount += amount;
 
 }
