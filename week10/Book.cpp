@@ -26,6 +26,10 @@ Book::Book(std::string idc, std::string t, std::string a)
     // Set author
     author = a;
 
+    // Initialize checkedOutBy and requestedBy as null pointers
+    checkedOutBy = nullptr;
+    requestedBy = nullptr;
+
 }
 
 // Accesses the GET_CHECKOUT_LENGTH const
