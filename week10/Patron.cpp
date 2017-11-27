@@ -54,7 +54,8 @@ std::vector<Book*> Patron::getCheckedOutBooks()
 *********************************************************************/
 void Patron::addBook(Book* b)
 {
-
+    // Add (Book pointer) b to the end of the list of checkedOutBooks
+    checkedOutBooks.push_back(b);
 }
 
 
@@ -63,7 +64,10 @@ void Patron::addBook(Book* b)
 *********************************************************************/
 void Patron::removeBook(Book* b)
 {
-
+    // Remove (Book pointer) b from the list of checkedOutBooks
+    // Use vector::erase() for any element in the vector
+    // vector::pop_back() only works for the last element
+    checkedOutBooks.erase(b);
 }
 
 
