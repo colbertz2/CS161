@@ -17,6 +17,14 @@
 *********************************************************************/
 Book::Book(std::string idc, std::string t, std::string a)
 {
+    // Set idCode (no set function given, so do it manually)
+    idCode = idc;
+
+    // Set title
+    title = t;
+
+    // Set author
+    author = a;
 
 }
 
