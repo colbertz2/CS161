@@ -67,7 +67,19 @@ void Patron::removeBook(Book* b)
     // Remove (Book pointer) b from the list of checkedOutBooks
     // Use vector::erase() for any element in the vector
     // vector::pop_back() only works for the last element
-    checkedOutBooks.erase(b);
+    int bookIndex = -1;
+    
+    for (Book* chkBook : checkedOutBooks)
+    {
+        bookIndex++;
+        if (chkBook == b)
+        {
+            break;
+        }
+    }
+
+    checkedOutBooks.erase(checkedOutBooks.begin() + bookIndex);
+
 }
 
 
