@@ -173,6 +173,8 @@ std::string Library::requestBook(std::string pID, std::string bID)
         (*chkBook).setLocation(ON_HOLD_SHELF);
     }
 
+    return "request successful";
+
 }
 
 
