@@ -76,7 +76,7 @@ std::string Library::checkOutBook(std::string pID, std::string bID)
     }
 
     // if the specified Book is on hold by another Patron, return "book on hold by other patron"
-    if ((*chkBook).getRequestedBy() != nullptr)
+    if ((*chkBook).getRequestedBy() != chkPatron)
     {
         return "book on hold by other patron";
     }
