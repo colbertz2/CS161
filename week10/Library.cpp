@@ -30,6 +30,9 @@ void Library::addBook(Book* newBook)
 {
     // vector::push_back will add Book* to the end of the vector
     holdings.push_back(newBook);
+
+    // Set location to ON_SHELF
+    (*newBook).setLocation(ON_SHELF);
 }
 
 
