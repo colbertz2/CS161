@@ -53,7 +53,24 @@ int main()
 
     lib.incrementCurrentDate();
 
-    cout << lib.requestBook("abc", "123") << endl;
+    cout << lib.requestBook("bcd", "123") << endl;
+
+    printInfo("abc", "123", lib);
+
+    for (int i = 0; i < 21; i++)
+    {
+        lib.incrementCurrentDate();
+    }
+
+    cout << lib.returnBook("123") << endl;
+    cout << lib.checkOutBook("abc", "123") << endl;
+    cout << lib.checkOutBook("bcd", "123") << endl;
+
+    printInfo("abc", "123", lib);
+
+    lib.incrementCurrentDate();
+
+    cout << lib.payFine("abc", 0.2) << endl;
 
     printInfo("abc", "123", lib);
 
