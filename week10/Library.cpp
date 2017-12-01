@@ -193,7 +193,7 @@ std::string Library::payFine(std::string pID, double payment)
     }
 
     // use amendFine to update the Patron's fine; return "payment successful"
-    (*chkPatron).amendFine(payment);
+    (*chkPatron).amendFine(-1.0 * payment);
 
     return "payment successful";
 
