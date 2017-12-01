@@ -206,6 +206,21 @@ std::string Library::payFine(std::string pID, double payment)
 void Library::incrementCurrentDate()
 {
     currentDate++;
+
+    // For each patron of the library
+    for (Patron* chkPatron : members)
+    {
+        // For each of the patron's checked out books
+        for (Book* chkBook : (*chkPatron).getCheckedOutBooks())
+        {
+            // If the book is overdue
+            if (currentDate - (*chkBook).getDateCheckedOut() > 21)
+            {
+                // Add a 10 cent fine
+                (*chkPatron).amendFine(0.1);
+            }
+        }
+    }
 }
 
 
